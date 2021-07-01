@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>ScoreActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #008000; font-weight: bold;}
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ScoreActivity.java</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">package </span>com.myquiz.quizapp;
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a><span class="s0">import </span>android.content.Intent;
+<a name="l4"><span class="ln">4    </span></a><span class="s0">import </span>android.os.Bundle;
+<a name="l5"><span class="ln">5    </span></a><span class="s0">import </span>android.view.View;
+<a name="l6"><span class="ln">6    </span></a><span class="s0">import </span>android.widget.Button;
+<a name="l7"><span class="ln">7    </span></a><span class="s0">import </span>android.widget.TextView;
+<a name="l8"><span class="ln">8    </span></a>
+<a name="l9"><span class="ln">9    </span></a><span class="s0">import </span>androidx.appcompat.app.AppCompatActivity;
+<a name="l10"><span class="ln">10   </span></a>
+<a name="l11"><span class="ln">11   </span></a><span class="s0">public class </span>ScoreActivity <span class="s0">extends </span>AppCompatActivity {
+<a name="l12"><span class="ln">12   </span></a>
+<a name="l13"><span class="ln">13   </span></a>    <span class="s0">private </span>TextView score;
+<a name="l14"><span class="ln">14   </span></a>    <span class="s0">private </span>Button btnEnd;
+<a name="l15"><span class="ln">15   </span></a>
+<a name="l16"><span class="ln">16   </span></a>    @Override
+<a name="l17"><span class="ln">17   </span></a>    <span class="s0">protected void </span>onCreate(Bundle savedInstanceState) {
+<a name="l18"><span class="ln">18   </span></a>        <span class="s0">super</span>.onCreate(savedInstanceState);
+<a name="l19"><span class="ln">19   </span></a>        setContentView(R.layout.activity_score);
+<a name="l20"><span class="ln">20   </span></a>
+<a name="l21"><span class="ln">21   </span></a>        score = findViewById(R.id.score);
+<a name="l22"><span class="ln">22   </span></a>        btnEnd = findViewById(R.id.btnEnd);
+<a name="l23"><span class="ln">23   </span></a>
+<a name="l24"><span class="ln">24   </span></a>        String score_str = getIntent().getStringExtra(<span class="s2">&quot;SCORE&quot;</span>);
+<a name="l25"><span class="ln">25   </span></a>        score.setText(score_str);
+<a name="l26"><span class="ln">26   </span></a>
+<a name="l27"><span class="ln">27   </span></a>        btnEnd.setOnClickListener(<span class="s0">new </span>View.OnClickListener() {
+<a name="l28"><span class="ln">28   </span></a>            @Override
+<a name="l29"><span class="ln">29   </span></a>            <span class="s0">public void </span>onClick(View v) {
+<a name="l30"><span class="ln">30   </span></a>                 Intent intent = <span class="s0">new </span>Intent(ScoreActivity.<span class="s0">this</span>, MainActivity.<span class="s0">class</span>);
+<a name="l31"><span class="ln">31   </span></a>                 ScoreActivity.<span class="s0">this</span>.startActivity(intent);
+<a name="l32"><span class="ln">32   </span></a>                 ScoreActivity.<span class="s0">this</span>.finish();
+<a name="l33"><span class="ln">33   </span></a>            }
+<a name="l34"><span class="ln">34   </span></a>        });
+<a name="l35"><span class="ln">35   </span></a>
+<a name="l36"><span class="ln">36   </span></a>    }
+<a name="l37"><span class="ln">37   </span></a>}</pre>
+</body>
+</html>

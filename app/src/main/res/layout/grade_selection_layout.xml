@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/circle_shape"
+    android:backgroundTint="@color/orange"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/gradeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sparkle_dream"
+        android:text="Grade 2"
+        android:textColor="@color/darkBlue"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GradeLevelSelectionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/grade_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#E91E63"
+        ></androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Sets"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:fontFamily="@font/paper"/>
+
+    <GridView
+        android:id="@+id/grade_grid_view"
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:numColumns="1"
+        android:verticalSpacing="16dp"
+
+        ></GridView>
+
+
+</LinearLayout>
